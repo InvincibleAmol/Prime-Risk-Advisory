@@ -391,34 +391,20 @@ footer {
         padding: 8px 12px;
     }
 
-     .brand {
-        width: 100%;
+    .brand {
+        order: 1;              /* 👈 ALWAYS first row */
+        flex: 0 0 100%;
         justify-content: flex-start;
         margin-bottom: 6px;
     }
 
-    .brand-text {
-        line-height: 1.05;
-    }
-
-    .brand-name {
-        font-size: 15px;
-        font-weight: 700;
-    }
-
-    .brand-subtitle {
-        font-size: 10px;
-    }
-
-    .brand-slogan {
-        font-size: 9px;
-    }
-
- .nav-links {
-        width: 100%;
+    .nav-links {
+        order: 2;              /* 👈 ALWAYS second row */
+        flex: 0 0 100%;
         justify-content: center;
-        gap: 16px;
+        gap: 14px;
     }
+
     .nav-links a {
         font-size: 13px;
         padding: 6px 10px;
@@ -428,3 +414,4 @@ footer {
         height: 2px;
     }
 }
+
