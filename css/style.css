@@ -382,34 +382,37 @@ footer {
 .navbar-wrapper.scrolled .navbar {
     height: 65px;
 }
-/* MOBILE MENU */
+/* ================= MOBILE MENU ================= */
+
 .hamburger {
     display: none;
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
 
     .navbar {
-        height: 58px;
+        position: relative;
+        height: 60px;
         padding: 0 14px;
     }
 
+    /* hide links by default */
     .nav-links {
         position: absolute;
-        top: 58px;
+        top: 60px;
         left: 0;
         right: 0;
         background: linear-gradient(135deg, #0f172a, #0dcaf0);
         flex-direction: column;
-        gap: 0;
-        display: none;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        align-items: center;
+        display: none;   /* 👈 THIS is missing in your current view */
+        z-index: 999;
     }
 
     .nav-links li {
+        width: 100%;
         text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
     .nav-links a {
@@ -418,11 +421,13 @@ footer {
         font-size: 15px;
     }
 
+    /* show hamburger */
     .hamburger {
         display: flex;
         flex-direction: column;
         gap: 4px;
         cursor: pointer;
+        margin-left: auto;
     }
 
     .hamburger span {
@@ -432,7 +437,9 @@ footer {
         border-radius: 2px;
     }
 
+    /* open state */
     .nav-links.open {
         display: flex;
     }
 }
+
