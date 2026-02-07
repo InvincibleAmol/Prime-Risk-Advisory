@@ -15,7 +15,11 @@ body {
     line-height: 1.7;
     color: #334155;
     background: #f8fafc;
-  
+
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
 section[id],
@@ -408,6 +412,7 @@ footer {
         position: sticky;
         top: 0;
         z-index: 1100;
+        will-change: transform;
     }
 
     .hamburger {
@@ -423,37 +428,39 @@ footer {
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 33%;
-        height: 98vh;
-        align-items: center;
-        border-radius: 2%;
+        right: 0;
 
-        /* PROFESSIONAL CONSULTING BACKGROUND */
-        background:
-            linear-gradient(180deg,
-                #0b1f2a 0%,
-                #0e2f3f 55%,
-                #0dcaf0 120%);
+        width: min(320px, 85vw);
+        height: 100dvh;
+
+        background: rgba(15, 23, 42, 0.92);
+        backdrop-filter: blur(16px);
+
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-top: 90px;
-        transition: right 0.35s ease;
-        z-index: 1000;
-        box-shadow:
-            inset 1px 0 0 rgba(255, 255, 255, 0.08),
-            -18px 0 40px rgba(0, 0, 0, 0.45);
-            transform: translateX(0);
-            opacity: 0;
+        padding-top: 76px;
 
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+
+        z-index: 1000;
+        box-shadow: -18px 0 40px rgba(0, 0, 0, 0.45);
+    }
+
+    /* DIVIDER BELOW BRAND AREA */
+    .nav-links::before {
+        content: "";
+        position: absolute;
+        top: 64px;
+        left: 24px;
+        right: 24px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.08);
     }
 
     .nav-links.open {
-        color: #0f172a;
-        font-weight: 600;
-        right: 0;
-        opacity: 1;
+        transform: translateX(0);
     }
 
     .nav-links li {
@@ -466,7 +473,8 @@ footer {
     .nav-links a {
         padding: 10px 0;
         letter-spacing: 0.3px;
-        color: #e5f6ff;
+        color: #e5e7eb;
+        font-size: 16px;
         display: block;
         align-items: center;
     }
@@ -476,13 +484,18 @@ footer {
         opacity: 0.6;
     }
 
+    .nav-links a:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.06);
+    }
+
     /* ===== BLUR OVERLAY ===== */
     body.menu-open::before {
         content: "";
         position: fixed;
         inset: 0;
-        background: rgba(2, 8, 23, 0.55);
-        backdrop-filter: blur(5px);
+        background: rgba(2, 8, 23, 0.65);
+        backdrop-filter: blur(8px);
         z-index: 900;
     }
 
