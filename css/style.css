@@ -17,6 +17,12 @@ body {
     background: #f8fafc;
 
 }
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
 
 body.menu-open {
     overflow: hidden;
@@ -430,22 +436,28 @@ footer {
         top: 0;
         right: 0;
 
-        width: min(320px, 85vw);
-        height: 100dvh;
+        width: 85vw;
+        max-width: 320px;
+        height: 100vh;
 
         background: rgba(15, 23, 42, 0.92);
         backdrop-filter: blur(16px);
 
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 76px;
+        padding-top: 88px;
 
-        transform: translateX(100%);
+        transform: translate3d(100%, 0, 0);
         transition: transform 0.35s ease;
 
+        overflow-x: hidden;   /* 🔥 IMPORTANT */
+        box-sizing: border-box;
+
         z-index: 1000;
-        box-shadow: -18px 0 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .nav-links.open {
+        transform: translate3d(0, 0, 0);
     }
 
     /* DIVIDER BELOW BRAND AREA */
@@ -457,11 +469,7 @@ footer {
         right: 24px;
         height: 1px;
         background: rgba(255, 255, 255, 0.08);
-    }
-
-    .nav-links.open {
-        transform: translateX(0);
-    }
+    }   
 
     .nav-links li {
         text-align: center;
