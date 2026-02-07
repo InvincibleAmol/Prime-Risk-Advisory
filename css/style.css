@@ -387,49 +387,70 @@ footer {
 .hamburger {
     display: none;
 }
-
 @media (max-width: 768px) {
 
+    
     .navbar {
-        position: relative;
-        height: 60px;
-        padding: 0 14px;
-    }
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
     /* hide links by default */
-    .nav-links {
+   .nav-links {
         position: absolute;
         top: 60px;
         left: 0;
-        right: 0;
+        width: 100%;
         background: linear-gradient(135deg, #0f172a, #0dcaf0);
+        display: none;
         flex-direction: column;
-        align-items: center;
-        display: none;   /* 👈 THIS is missing in your current view */
         z-index: 999;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+        animation: slideDown 0.25s ease-out;
     }
 
     .nav-links li {
         width: 100%;
-        text-align: center;
         border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
     .nav-links a {
-        display: block;
-        padding: 14px;
+        width: 100%;
+        padding: 16px 0;
+        text-align: center;
         font-size: 15px;
+        font-weight: 600;
     }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* smooth dropdown animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
     /* show hamburger */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
+   .hamburger {
+        display: block;
+        font-size: 24px;
+        color: #fff;
         cursor: pointer;
-        margin-left: auto;
     }
-
     .hamburger span {
         width: 22px;
         height: 2px;
@@ -442,4 +463,5 @@ footer {
         display: flex;
     }
 }
+
 

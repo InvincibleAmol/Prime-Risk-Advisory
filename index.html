@@ -184,15 +184,21 @@
         });
     </script>
 
-    <script>
+   <script>
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.querySelector(".nav-links");
+  const links = document.querySelectorAll(".nav-links a");
 
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
-</script>
 
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+    });
+  });
+</script>
 
 </body>
 
