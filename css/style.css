@@ -367,10 +367,6 @@ footer {
     .services-grid {
         grid-template-columns: 1fr;
     }
-
-    .navbar {
-        padding: 15px;
-    }
 }
 
 /* SCROLL EFFECTS */
@@ -389,10 +385,11 @@ footer {
 
 @media (max-width: 768px) {
     .brand {
-        flex-direction: row;        /* keep logo + text side-by-side */
+        flex-direction: row;      /* logo left, text right */
         align-items: center;
         gap: 10px;
     }
+
 
     .brand-text {
         line-height: 1.05;
@@ -409,5 +406,15 @@ footer {
 
     .brand-slogan {
         font-size: 9px;
+    }
+
+     .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 4px 8px;
+        font-weight: 600;
     }
 }
