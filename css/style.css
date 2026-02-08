@@ -513,7 +513,7 @@ ul li {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 28px;
     margin-top: 26px;
 }
@@ -581,64 +581,35 @@ footer {
 }
 
 /* =========================================================
-   TABLET
+   TABLET (769px - 1200px)
 ========================================================= */
-
-@media (max-width: 1200px) and (min-width: 769px) {
-
+@media (min-width: 769px) and (max-width: 1200px) {
+    /* Desktop nav stays horizontal - NO HAMBURGER */
     .hamburger {
-        display: block;
-        position: absolute;
-        top: 18px;
-        right: 18px;
-        cursor: pointer;
-        z-index: 1200;
+        display: none;  /* Keep hidden on tablet */
     }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 85vw;
-        max-width: 320px;
-        height: 100vh;
-        flex-direction: column;
-        padding-top: 88px;
-        background: rgba(15, 23, 42, 0.92);
-        backdrop-filter: blur(16px);
-        transform: translate3d(100%, 0, 0);
-        transition: transform 0.35s ease;
-        z-index: 1000;
+    
+    /* Slightly smaller sections */
+    section,
+    .site-header {
+        max-width: 100%;
+        margin: 60px auto;
+        padding: 32px 6%;
     }
-
-    .nav-links.open {
-        transform: translate3d(0, 0, 0);
-    }
-
-    body.menu-open::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: rgba(2, 8, 23, 0.65);
-        backdrop-filter: blur(8px);
-        z-index: 900;
-    }
-
-    section {
-        width: auto;
-        margin: 72px 35%;
-        padding: 40px 5%;
-        /* % scales perfectly */
-        border-radius: 12px;
-        overflow: visible;
-        box-sizing: border-box;
-    }
-
+    
+    /* 2-3 column services grid */
     .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 28px;
-        margin-top: 26px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+    }
+    
+    /* Scale down fonts slightly */
+    .hero-heading { font-size: 32px; }
+    h2 { font-size: 26px; }
+    .brand-name { font-size: 18px; }
+    
+    .navbar {
+        padding: 0 6%;
     }
 }
 
@@ -647,12 +618,8 @@ footer {
 ========================================================= */
 
 
+/* NEW: ONLY TRUE MOBILE */
 @media (max-width: 768px) {
-
-    .navbar {
-        padding: 0 10px;
-    }
-
     .hamburger {
         display: block;
         position: absolute;
@@ -662,86 +629,60 @@ footer {
         z-index: 1200;
     }
 
+    /* Hide nav links by default on mobile */
     .nav-links {
+        display: none;
+        /* CRITICAL LINE */
+    }
+
+    .nav-links.open {
+        display: flex;
+        /* Show only when clicked */
         position: fixed;
         top: 0;
         right: 0;
-        width: 35vw;
-        max-width: 300px;
+        width: 70vw;
         height: 100vh;
         flex-direction: column;
         padding-top: 88px;
-        background: rgba(15, 23, 42, 0.92);
-        backdrop-filter: blur(16px);
-        transform: translate3d(100%, 0, 0);
-        transition: transform 0.35s ease;
+        background: rgba(15, 23, 42, 0.95);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .nav-links.open {
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
 
-    body.menu-open::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: rgba(2, 8, 23, 0.65);
-        backdrop-filter: blur(8px);
-        z-index: 900;
-    }
-
-    section {
-        width: auto;
-        margin: 72px 35px;
-        padding: 40px 5%;
-        /* % scales perfectly */
-        border-radius: 12px;
-        overflow: visible;
-        box-sizing: border-box;
-    }
-
-    .site-header {
-        padding-left: 16px;
-        padding-right: 16px;
+    section{
+        margin: 48px auto;
+        padding: 28px 6%;
     }
 }
 
-@media (max-width: 640px) {
-    .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
 
 @media (max-width: 480px) {
-
-    /* NEW: Extra small screens */
     section{
         margin: 32px auto;
         padding: 24px 4%;
     }
-
-    .hero-heading {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
+    
+    .hero-heading { font-size: 26px; }
+    h2 { font-size: 22px; }
+    
     .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        /* 2-col before 1 */
+        grid-template-columns: 1fr;  /* Always 1 column mobile */
         gap: 20px;
+        minmax(280px, 1fr);  /* DELETE - conflicts */
     }
 }
 
 @media (max-width: 360px) {
-
-    section,
-    .site-header {
+    section{
         padding: 20px 3%;
+        margin: 24px auto;
     }
+    
+    .services-grid { gap: 16px; }
 }
-
-
