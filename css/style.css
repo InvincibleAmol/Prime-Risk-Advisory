@@ -17,6 +17,7 @@ html,
 body {
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -70,7 +71,7 @@ img {
 .navbar {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 10%;
+    padding: 0 5% 0 5%;
     height: 72px;
     display: flex;
     align-items: center;
@@ -208,7 +209,7 @@ img {
     background: linear-gradient(135deg, #0f172a, #0dcaf0);
     color: #ffffff;
     text-align: center;
-    padding: 20px 24px;
+    padding: 40px 5%;
     position: relative;
     overflow: hidden;
 }
@@ -444,7 +445,7 @@ img {
 section {
     max-width: 1500px;
     margin: 72px auto;
-    padding: 30px;
+    padding: 40px 5%;
     border-radius: 12px;
 }
 
