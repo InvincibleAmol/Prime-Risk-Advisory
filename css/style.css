@@ -33,10 +33,10 @@ body.menu-open {
     overflow: hidden;
 }
 
+
 section,
 header,
 footer {
-    max-width: 100vw;
     overflow-x: hidden;
 }
 
@@ -208,7 +208,7 @@ img {
     background: linear-gradient(135deg, #0f172a, #0dcaf0);
     color: #ffffff;
     text-align: center;
-    padding: 20px 24px;
+    padding: 36px 24px;
     position: relative;
     overflow: hidden;
 }
@@ -289,11 +289,13 @@ img {
 .modal-content.secure-modal {
     position: relative;
     max-width: 480px;
-    max-height: 80vh;          /* Make modal scrollable if too tall */
+    max-height: 80vh;
+    /* Make modal scrollable if too tall */
     overflow-y: auto;
-    margin: 5vh auto;          /* Center vertically */
+    margin: 5vh auto;
+    /* Center vertically */
     background: linear-gradient(#ffffff, #ffffff) padding-box,
-                linear-gradient(135deg, #0dcaf0, #fcd34d) border-box;
+        linear-gradient(135deg, #0dcaf0, #fcd34d) border-box;
     border: 1px solid rgba(13, 202, 240, 0.45);
     padding: 32px;
     border-radius: 14px;
@@ -302,8 +304,15 @@ img {
 }
 
 @keyframes modalFadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .modal-close {
@@ -435,17 +444,20 @@ img {
     margin-top: 12px;
 }
 
-   
+
 
 /* =========================================================
    SECTIONS
 ========================================================= */
 
 section {
-    max-width: 1500px;
-    margin: 72px 40px;
-    padding: 30px 40px;
+    width: auto;
+    margin: 72px 35px;
+    padding: 40px 5%;
+    /* % scales perfectly */
     border-radius: 12px;
+    overflow: visible;
+    box-sizing: border-box;
 }
 
 .section-light {
@@ -501,7 +513,7 @@ ul li {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 28px;
     margin-top: 26px;
 }
@@ -611,12 +623,28 @@ footer {
         backdrop-filter: blur(8px);
         z-index: 900;
     }
+
+    section {
+        width: auto;
+        margin: 72px 35%;
+        padding: 40px 5%;
+        /* % scales perfectly */
+        border-radius: 12px;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 28px;
+        margin-top: 26px;
+    }
 }
 
 /* =========================================================
    MOBILE
 ========================================================= */
-
 @media (max-width: 768px) {
 
     .navbar {
@@ -662,8 +690,13 @@ footer {
     }
 
     section {
-        margin: 40px 40px;
-        padding: 24px 40px;
+        width: auto;
+        margin: 72px 35px;
+        padding: 40px 5%;
+        /* % scales perfectly */
+        border-radius: 12px;
+        overflow: visible;
+        box-sizing: border-box;
     }
 
     .site-header {
@@ -672,8 +705,41 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+
+    /* NEW: Extra small screens */
+    section,
+    .site-header {
+        margin: 32px auto;
+        padding: 24px 4%;
+    }
+
+    .hero-heading {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* 2-col before 1 */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    section,
+    .site-header {
+        padding: 20px 3%;
+    }
+}
+
+
 @media (max-width: 640px) {
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
