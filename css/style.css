@@ -1,6 +1,3 @@
-/* =========================================================
-   GLOBAL (Optimized 50% smaller)
-========================================================= */
 *,
 *::before,
 *::after {
@@ -52,7 +49,7 @@ img {
 }
 
 /* =========================================================
-   NAVBAR (Combined selectors)
+   NAVBAR (GPU optimized)
 ========================================================= */
 .navbar-wrapper {
     position: sticky;
@@ -62,8 +59,8 @@ img {
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(13, 202, 240, .2);
     transition: all .3s ease;
-    box-shadow:0 4px 18px rgba(0,0,0,0.08);
-
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    will-change: box-shadow
 }
 
 .navbar-wrapper.scrolled {
@@ -80,7 +77,6 @@ img {
     justify-content: space-between
 }
 
-/* Brand (combined scrolled states) */
 .brand {
     display: flex;
     align-items: center;
@@ -141,7 +137,7 @@ img {
 }
 
 /* =========================================================
-   NAV LINKS (Optimized pseudo-elements)
+   NAV LINKS
 ========================================================= */
 .nav-links {
     display: flex;
@@ -202,7 +198,7 @@ img {
 }
 
 /* =========================================================
-   HERO (Optimized animations)
+   HERO
 ========================================================= */
 .site-header {
     background: linear-gradient(135deg, #0f172a, #0dcaf0);
@@ -265,7 +261,7 @@ img {
 }
 
 /* =========================================================
-   CONTACT MODAL (Optimized gradients)
+   CONTACT MODAL
 ========================================================= */
 .contact-modal {
     position: fixed;
@@ -349,93 +345,8 @@ img {
     margin-bottom: 20px
 }
 
-/* ================= SUCCESS ANIMATION ================= */
-
-.success-state {
-    text-align: center;
-    padding: 2rem;
-    animation: fadeInUp 0.45s ease;
-}
-
-.success-check {
-    width: 72px;
-    height: 72px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    background: #16a34a;
-    color: #fff;
-    font-size: 2.8rem;
-    line-height: 72px;
-    font-weight: bold;
-}
-
-.success-state h3 {
-    margin-bottom: 0.5rem;
-    color: #0f172a;
-}
-
-.success-state p {
-    color: #475569;
-    margin-bottom: 1.5rem;
-}
-
-.success-close {
-    padding: 0.65rem 1.5rem;
-    border-radius: 6px;
-    border: none;
-    background: #0f172a;
-    color: white;
-    cursor: pointer;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(14px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== BUTTON LOADING SPINNER ===== */
-.form-submit {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.btn-spinner {
-    width: 16px;
-    height: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-top-color: #ffffff;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    display: none;
-}
-
-.form-submit.loading .btn-spinner {
-    display: inline-block;
-}
-
-.form-submit.loading .btn-text {
-    opacity: 0.7;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
 /* =========================================================
-   CONTACT FORM (Combined form selectors)
+   FORM (Minified selectors)
 ========================================================= */
 .contact-form label {
     display: block;
@@ -479,9 +390,7 @@ img {
     background-size: 12px;
     padding-right: 36px;
     cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none
+    appearance: none
 }
 
 .secure-footer {
@@ -510,7 +419,11 @@ img {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition: .3s
+    transition: .3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px
 }
 
 .form-submit.secure-submit:hover {
@@ -524,7 +437,84 @@ img {
 }
 
 /* =========================================================
-   SECTIONS & TYPOGRAPHY (Combined)
+   SUCCESS STATE
+========================================================= */
+.success-state {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeInUp .45s ease
+}
+
+.success-check {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: #16a34a;
+    color: #fff;
+    font-size: 2.8rem;
+    line-height: 72px;
+    font-weight: bold
+}
+
+.success-state h3 {
+    margin-bottom: .5rem;
+    color: #0f172a
+}
+
+.success-state p {
+    color: #475569;
+    margin-bottom: 1.5rem
+}
+
+.success-close {
+    padding: .65rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    background: #0f172a;
+    color: #fff;
+    cursor: pointer
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/* BUTTON SPINNER */
+.btn-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+    display: none
+}
+
+.form-submit.loading .btn-spinner {
+    display: inline-block
+}
+
+.form-submit.loading .btn-text {
+    opacity: .7
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* =========================================================
+   SECTIONS
 ========================================================= */
 section {
     width: auto;
@@ -573,7 +563,7 @@ ul li {
 }
 
 /* =========================================================
-   SERVICES (Optimized animations)
+   SERVICES
 ========================================================= */
 .services-grid {
     display: grid;
@@ -604,7 +594,8 @@ ul li {
     box-shadow: 0 12px 28px rgba(0, 0, 0, .08)
 }
 
-.contact-box {
+.contact-box,
+.contact-box1 {
     background: #fff;
     border-left: 4px solid #fcd34d;
     padding: 24px;
@@ -612,60 +603,9 @@ ul li {
     box-shadow: 0 6px 20px rgba(0, 0, 0, .06)
 }
 
-footer {
-    text-align: center;
-    background: #0f172a;
-    color: #94a3b8;
-    padding: 20px 20px;
-    font-size: 13.5px;
-}
-
-
-/* Footer Social Icons - Perfect Match */
-.footer-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 16px;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(13, 202, 240, 0.2), rgba(252, 211, 77, 0.2));
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(13, 202, 240, 0.3);
-    color: #0dcaf0;
-    text-decoration: none;
-    transition: all .3s cubic-bezier(.25, .46, .45, .94);
-}
-.social-link:hover {
-    background: linear-gradient(135deg, #0dcaf0, #fcd34d);
-    color: #fff;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(13, 202, 240, 0.4);
-}
-
-.social-icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    border-radius: 15%;
-}
-
-/* Pedigree Section (Matches service-card exactly) */
 .contact-box1 {
     background: rgb(235 239 243);
-    border-left: 4px solid #fcd34d;
-    margin-top: 2%;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, .06)
+    margin-top: 2%
 }
 
 .milestone-number {
@@ -684,33 +624,58 @@ footer {
     color: #0f172a
 }
 
-/* =========================================================
-   HAMBURGER (Simplified)
-========================================================= */
-.hamburger {
-    display: none
-}
-
-.hamburger span {
-    width: 22px;
-    height: 2px;
-    margin: 5px 0;
-    background: #fff;
-    display: block;
-    border-radius: 2px
+footer {
+    text-align: center;
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 20px 20px;
+    font-size: 13.5px
 }
 
 /* =========================================================
-   RESPONSIVE (Combined media queries)
+   RESPONSIVE (Grouped)
 ========================================================= */
 @media (max-width:768px) {
     .hamburger {
-        display: block;
-        position: absolute;
-        top: 18px;
-        right: 18px;
+        display: flex !important;
+        /* Force show */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute !important;
+        top: 18px !important;
+        right: 18px !important;
         cursor: pointer;
-        z-index: 1200
+        z-index: 1200 !important;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .hamburger span {
+        width: 22px !important;
+        height: 2px !important;
+        background: #fff !important;
+        border-radius: 2px !important;
+        margin: 3px 0 !important;
+        display: block !important;
+        transition: all .3s ease;
+        transform-origin: center;
+    }
+
+    /* X animation when open */
+    .hamburger[aria-expanded="true"] span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -7px);
     }
 
     .nav-links {
@@ -740,30 +705,9 @@ footer {
         margin: 48px auto;
         padding: 28px 6%
     }
-
-    .footer-social {
-        gap: 16px;
-        margin: 16px 0;
-    }
-
-    .social-link {
-        width: 40px;
-        height: 40px;
-    }
-
-    .social-icon {
-        width: 20px;
-        height: 20px;
-        border-radius: 10%;
-    }
 }
 
-
-
 @media (min-width:769px) and (max-width:1200px) {
-    .hamburger {
-        display: none
-    }
 
     section,
     .site-header {

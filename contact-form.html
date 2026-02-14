@@ -1,4 +1,4 @@
-<!-- ✅ EMBEDDED SECURE CONTACT MODAL (NO EXTERNAL FETCH) -->
+<!-- ✅ EMBEDDED SECURE CONTACT MODAL (VISUALLY IDENTICAL) -->
 <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true"
     aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
     <div class="modal-overlay" id="closeModal"></div>
@@ -8,51 +8,46 @@
         <h2 id="contactModalTitle">Request a Confidential Discussion</h2>
         <p class="modal-note secure-note" id="contactModalDesc">
             This secure channel is intended for sensitive inquiries. Information is accessible only to authorized
-            personnel.
-            Please do not include passwords, OTPs, or full account numbers.
+            personnel. Please do not include passwords, OTPs, or full account numbers.
         </p>
 
-
-        <!-- ✅ PERFECT FORM - Google Sheets Native Submit -->
+        <!-- ✅ PERFECT FORM -->
         <form class="contact-form"
             action="https://script.google.com/macros/s/AKfycbz7Tj_Z7t3mfnhIAj2rbvhQINo4hFl3y8PfQBS9Ijsza_1HGfqdN5Hpeio9WXp4Ni5JAg/exec"
-            method="POST">
+            method="POST" novalidate>
 
             <input type="hidden" name="_csrf" value="generate-unique-token">
             <input type="hidden" name="source" value="Secure Website Contact">
             <input type="hidden" name="confidentiality" value="Privileged & Confidential">
             <input type="hidden" name="hp_email" autocomplete="off">
 
-
-            <label>Full Name *
-                <input type="text" name="name" required autocomplete="name" placeholder="John Doe">
+            <label for="name">Full Name *
+                <input id="name" type="text" name="name" required autocomplete="name" placeholder="Full Name">
             </label>
-            <label>Email Address *
-                <input type="email" name="email" required autocomplete="email" placeholder="your.email@example.com">
+            <label for="email">Email Address *
+                <input id="email" type="email" name="email" required autocomplete="email"
+                    placeholder="your.email@example.com">
             </label>
-            <label>Phone
-                <input type="tel" name="phone" placeholder="+91 (XXX) XXX-XXXX" autocomplete="tel">
+            <label for="phone">Phone
+                <input id="phone" type="tel" name="phone" placeholder="XXX XXX-XXXX" autocomplete="tel">
             </label>
-            <label>Organization / Institution
-                <input type="text" name="organization" placeholder="Institution name" autocomplete="organization">
+            <label for="org">Organization / Institution
+                <input id="org" type="text" name="organization" placeholder="Institution name"
+                    autocomplete="organization">
             </label>
-            <label>Service Type *
-                <select name="service_type" required>
+            <label for="service">Service Type *
+                <select id="service" name="service_type" required>
                     <option value="">Select a service</option>
-                    <option value="credit_integrity_audit">Credit Integrity Review</option>
-                    <option value="staff_accountability_review">Staff Accountability Assessment</option>
-                    <option value="vendor_surveillance">Third-Party Vendor Review</option>
-                    <option value="ews_monitoring">Early Warning Signal Monitoring</option>
+                    <option value="credit integrity audit">Credit Integrity Review</option>
+                    <option value="staff accountability review">Staff Accountability Assessment</option>
+                    <option value="vendor surveillance">Third-Party Vendor Review</option>
+                    <option value="ews monitoring">Early Warning Signal Monitoring</option>
                     <option value="other">Other / Not Sure</option>
-
-
                 </select>
             </label>
 
-
-
-            <label>Nature of Inquiry
-                <textarea name="message" rows="4"
+            <label for="message">Nature of Inquiry
+                <textarea id="message" name="message" rows="4"
                     placeholder="High-level description only. Do not include credentials or account numbers."></textarea>
             </label>
 
@@ -61,23 +56,20 @@
                 <span>🛡️ Restricted professional access</span>
             </div>
 
-
-            <p id="formFeedback" class="small-note" style="display:none;"></p>
+            <p id="formFeedback" class="small-note" style="display:none;" role="alert" aria-live="polite"></p>
             <button type="submit" class="form-submit secure-submit">
-                <span class="btn-text">Submit Confidential Request
-                </span>
+                <span class="btn-text">Submit Secure Request</span>
                 <span class="btn-spinner" aria-hidden="true"></span>
             </button>
 
             <p class="small-note">Engagements are subject to independence and conflict-of-interest checks.</p>
         </form>
 
-        <!-- 👇 SUCCESS STATE GOES HERE 👇 -->
-        <div class="success-state" hidden>
+        <!-- SUCCESS STATE -->
+        <div class="success-state" hidden role="status" aria-live="polite">
             <div class="success-check">✓</div>
             <h3>Request Submitted</h3>
             <p>Your confidential request has been received. Our team will review and respond appropriately.</p>
-
             <button type="button" class="success-close">Close</button>
         </div>
     </div>

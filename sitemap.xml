@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage (Highest Priority) -->
   <url>
     <loc>https://primeriskadvisory.in/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Privacy Policy -->
   <url>
-    <loc>https://primeriskadvisory.in/privacy-policy.html</loc>  
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://primeriskadvisory.in/privacy-policy.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Terms & Conditions -->
   <url>
     <loc>https://primeriskadvisory.in/terms.html</loc>
     <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Anchor Pages (Section Links) -->
+  <url>
+    <loc>https://primeriskadvisory.in/#services</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://primeriskadvisory.in/#pedigree</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://primeriskadvisory.in/#why</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
