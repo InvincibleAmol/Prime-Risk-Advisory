@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!ticking) {
             requestAnimationFrame(() => {
                 navbar.classList.toggle("scrolled", window.scrollY > 40);
-                
+
                 serviceCards.forEach(card => {
                     if (card.getBoundingClientRect().top < window.innerHeight - 50) {
                         card.classList.add("visible");
                     }
                 });
-                
+
                 ticking = false;
             });
             ticking = true;
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===== CONTACT MODAL =====
     openModalBtn.addEventListener("click", async e => {
         e.preventDefault();
-        
+
         let modal = document.getElementById("contactModal");
         if (!modal) {
             const response = await fetch("contact-form.html");
@@ -66,8 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         modal.classList.add("active");
+        modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = "hidden";
-        
+        document.getElementById('modalCloseBtn').focus();
         resetForm(modal);
         initContactModal(modal);
     });
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const resetForm = modal => {
     const form = modal.querySelector(".contact-form");
     const feedback = modal.querySelector("#formFeedback");
-    
+
     if (form) form.reset();
     if (feedback) {
         feedback.style.display = "none";
@@ -87,6 +88,7 @@ const resetForm = modal => {
 
 const closeModalFunc = modal => {
     modal.classList.remove("active");
+    modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = "";
 };
 
@@ -117,7 +119,7 @@ const handleFormSubmit = async (modal, form, feedback) => {
 
     const submitBtn = form.querySelector("button[type='submit']");
     const btnText = submitBtn.querySelector(".btn-text");
-    
+
     setLoadingState(submitBtn, btnText, true);
 
     try {
