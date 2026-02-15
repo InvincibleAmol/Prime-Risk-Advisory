@@ -109,8 +109,8 @@ function initContactModal(modal) {
 }
 
 const handleFormSubmit = async (modal, form, feedback) => {
-    event.preventDefault();
-
+    event.preventDefault();  // ✅ Keep this
+    
     // Honeypot check
     if (form.hp_email.value) {
         showFeedback(feedback, "⚠️ Submission blocked (spam detected).", "red");
