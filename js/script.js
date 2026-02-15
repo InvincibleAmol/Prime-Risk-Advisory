@@ -105,12 +105,12 @@ function initContactModal(modal) {
     trapFocus(modal);
 
     // Form submission
-    form.addEventListener("submit", handleFormSubmit.bind(null, modal, form, feedback));
+    form.addEventListener("submit", (e) => handleFormSubmit(e, modal, form, feedback));
 }
 
-const handleFormSubmit = async (modal, form, feedback) => {
-    event.preventDefault();  // ✅ Keep this
-    
+const handleFormSubmit = async (e, modal, form, feedback) => {
+    e.preventDefault();
+
     // Honeypot check
     if (form.hp_email.value) {
         showFeedback(feedback, "⚠️ Submission blocked (spam detected).", "red");
