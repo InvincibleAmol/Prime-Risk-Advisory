@@ -138,19 +138,6 @@ Prime-Risk-Advisory/
 
 ---
 
-## 🚀 Run Locally
-
-```bash
-git clone https://github.com/CoreJavaPulse/Prime-Risk-Advisory.git
-cd Prime-Risk-Advisory
-```
-
-Open `index.html` in your browser.
-
-✅ Recommended: VS Code Live Server
-
----
-
 ## 📊 Measurable Impact
 
 * 🚀 Delivered real client production website
