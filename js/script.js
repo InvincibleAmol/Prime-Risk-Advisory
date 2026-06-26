@@ -55,23 +55,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ===== CONTACT MODAL =====
-    openModalBtn.addEventListener("click", async e => {
-        e.preventDefault();
+    if (openModalBtn) {
+        openModalBtn.addEventListener("click", async e => {
+            e.preventDefault();
 
-        let modal = document.getElementById("contactModal");
-        if (!modal) {
-            const response = await fetch("contact-form.html");
-            document.body.insertAdjacentHTML("beforeend", await response.text());
-            modal = document.getElementById("contactModal");
-        }
+            let modal = document.getElementById("contactModal");
+            if (!modal) {
+                const response = await fetch("contact-form.html");
+                document.body.insertAdjacentHTML("beforeend", await response.text());
+                modal = document.getElementById("contactModal");
+            }
 
-        modal.classList.add("active");
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = "hidden";
-        document.getElementById('modalCloseBtn').focus();
-        resetForm(modal);
-        initContactModal(modal);
-    });
+            modal.classList.add("active");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            document.getElementById("modalCloseBtn").focus();
+            resetForm(modal);
+            initContactModal(modal);
+        });
+    }
 });
 
 // ===== UTILITY FUNCTIONS =====
@@ -88,7 +90,7 @@ const resetForm = modal => {
 
 const closeModalFunc = modal => {
     modal.classList.remove("active");
-    modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
 };
 
@@ -98,20 +100,16 @@ function initContactModal(modal) {
     const form = modal.querySelector(".contact-form");
     const feedback = modal.querySelector("#formFeedback");
 
-    // Close handlers
     closeBtns.forEach(btn => btn.addEventListener("click", () => closeModalFunc(modal)));
 
-    // Trap focus
     trapFocus(modal);
 
-    // Form submission
     form.addEventListener("submit", (e) => handleFormSubmit(e, modal, form, feedback));
 }
 
 const handleFormSubmit = async (e, modal, form, feedback) => {
     e.preventDefault();
 
-    // Honeypot check
     if (form.hp_email.value) {
         showFeedback(feedback, "⚠️ Submission blocked (spam detected).", "red");
         return;
@@ -152,7 +150,7 @@ const handleFormSubmit = async (e, modal, form, feedback) => {
 const setLoadingState = (btn, textEl, loading) => {
     btn.disabled = loading;
     btn.classList.toggle("loading", loading);
-    textEl.textContent = loading ? "Submitting…" : "Submit Secure Request";
+    textEl.textContent = loading ? "Submitting…" : "Submit Confidential Request";
 };
 
 const showFeedback = (el, message, color) => {
@@ -170,7 +168,7 @@ function showSuccessAnimation(modal) {
     form.style.display = "none";
     submitBtn.disabled = false;
     submitBtn.classList.remove("loading");
-    btnText.textContent = "Submit Secure Request";
+    btnText.textContent = "Submit Confidential Request";
 
     success.hidden = false;
     success.querySelector(".success-close").onclick = () => {
