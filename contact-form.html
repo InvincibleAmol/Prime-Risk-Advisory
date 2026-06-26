@@ -1,75 +1,100 @@
-<!-- ✅ EMBEDDED SECURE CONTACT MODAL (VISUALLY IDENTICAL) -->
+<!-- ✅ EMBEDDED SECURE CONTACT MODAL (UPDATED CONTENT, SAME WORKING STRUCTURE) -->
 <div class="contact-modal" id="contactModal" role="dialog" aria-modal="true"
     aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
     <div class="modal-overlay" id="closeModal"></div>
     <div class="modal-content secure-modal">
         <button class="modal-close" id="modalCloseBtn" aria-label="Close">×</button>
         <div class="secure-badge">Secure & Confidential Channel</div>
-        <h2 id="contactModalTitle">Request a Confidential Discussion</h2>
+        <h2 id="contactModalTitle">Request a Confidential Consultation</h2>
         <p class="modal-note secure-note" id="contactModalDesc">
-            This secure channel is intended for sensitive inquiries. Information is accessible only to authorized
-            personnel. Please do not include passwords, OTPs, or full account numbers.
+            This secure channel is intended for confidential consultation requests related to due diligence,
+            verification, risk intelligence, and investigation services. Information is accessible only to authorized
+            personnel. Please do not include passwords, OTPs, full account numbers, or highly sensitive personal data
+            in the initial message.
         </p>
 
-        <!-- ✅ PERFECT FORM -->
         <form class="contact-form"
             action="https://script.google.com/macros/s/AKfycbyf_-rOi88GFxIeMnoUQJcVCsEUdtvs88hKjhKgi4oGYyfjIcn9o9bcIDZjInsORMRG/exec"
             method="POST" novalidate>
 
             <input type="hidden" name="_csrf" value="generate-unique-token">
-            <input type="hidden" name="source" value="Secure Website Contact">
+            <input type="hidden" name="source" value="Prime Risk Advisory Website Consultation Form">
             <input type="hidden" name="confidentiality" value="Privileged & Confidential">
             <input type="hidden" name="hp_email" autocomplete="off">
 
             <label for="name">Full Name *
                 <input id="name" type="text" name="name" required autocomplete="name" placeholder="Full Name">
             </label>
+
             <label for="email">Email Address *
                 <input id="email" type="email" name="email" required autocomplete="email"
                     placeholder="your.email@example.com">
             </label>
+
             <label for="phone">Phone
-                <input id="phone" type="tel" name="phone" placeholder="XXX XXX-XXXX" autocomplete="tel">
+                <input id="phone" type="tel" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
             </label>
+
             <label for="org">Organization / Institution
-                <input id="org" type="text" name="organization" placeholder="Institution name"
+                <input id="org" type="text" name="organization" placeholder="Organization / Institution name"
                     autocomplete="organization">
             </label>
+
             <label for="service">Service Type *
                 <select id="service" name="service_type" required>
                     <option value="">Select a service</option>
-                    <option value="credit integrity audit">Credit Integrity Review</option>
-                    <option value="staff accountability review">Staff Accountability Assessment</option>
-                    <option value="vendor surveillance">Third-Party Vendor Review</option>
-                    <option value="ews monitoring">Early Warning Signal Monitoring</option>
+                    <option value="banking-financial-services">Banking & Financial Institution Services</option>
+                    <option value="credit-due-diligence">Credit Due Diligence</option>
+                    <option value="borrower-background-verification">Promoter & Borrower Background Verification</option>
+                    <option value="ews-investigations">Early Warning Signal (EWS) Investigations</option>
+                    <option value="fraud-risk-investigations">Fraud Risk Investigations</option>
+                    <option value="portfolio-asset-quality-reviews">Portfolio & Asset Quality Reviews</option>
+                    <option value="recovery-support-intelligence">Recovery Support Intelligence</option>
+                    <option value="corporate-risk-solutions">Corporate Risk Solutions</option>
+                    <option value="employee-background-verification">Employee Background Verification</option>
+                    <option value="executive-due-diligence">Executive Due Diligence</option>
+                    <option value="vendor-supplier-verification">Vendor & Supplier Verification</option>
+                    <option value="corporate-investigations">Corporate Investigations</option>
+                    <option value="business-partner-due-diligence">Business Partner Due Diligence</option>
+                    <option value="conflict-of-interest-investigations">Conflict of Interest Investigations</option>
+                    <option value="fraud-misconduct-investigations">Fraud & Misconduct Investigations</option>
+                    <option value="asset-tracing">Asset Tracing</option>
+                    <option value="workplace-integrity-investigations">Workplace Integrity Investigations</option>
+                    <option value="matrimonial-family-verification">Matrimonial & Family Verification Services</option>
+                    <option value="pre-marriage-verification">Pre-Marriage Verification</option>
+                    <option value="property-verification-services">Property Verification Services</option>
+                    <option value="ownership-verification">Ownership Verification</option>
+                    <option value="builder-background-verification">Builder Background Verification</option>
+                    <option value="independent-property-due-diligence">Independent Property Due Diligence</option>
                     <option value="other">Other / Not Sure</option>
                 </select>
             </label>
 
             <label for="message">Nature of Inquiry
                 <textarea id="message" name="message" rows="4"
-                    placeholder="High-level description only. Do not include credentials or account numbers."></textarea>
+                    placeholder="Share a brief description of your requirement. Please provide only high-level details in the initial enquiry."></textarea>
             </label>
 
             <div class="secure-footer">
-                <span>🔒 Encrypted transmission</span>
+                <span>🔒 Confidential submission</span>
                 <span>🛡️ Restricted professional access</span>
             </div>
 
             <p id="formFeedback" class="small-note" style="display:none;" role="alert" aria-live="polite"></p>
+
             <button type="submit" class="form-submit secure-submit">
-                <span class="btn-text">Submit Secure Request</span>
+                <span class="btn-text">Submit Confidential Request</span>
                 <span class="btn-spinner" aria-hidden="true"></span>
             </button>
 
-            <p class="small-note">Engagements are subject to independence and conflict-of-interest checks.</p>
+            <p class="small-note">All enquiries are reviewed subject to independence and conflict-of-interest checks.</p>
         </form>
 
         <!-- SUCCESS STATE -->
         <div class="success-state" hidden role="status" aria-live="polite">
             <div class="success-check">✓</div>
             <h3>Request Submitted</h3>
-            <p>Your confidential request has been received. Our team will review and respond appropriately.</p>
+            <p>Your confidential consultation request has been received. Our team will review it and respond appropriately.</p>
             <button type="button" class="success-close">Close</button>
         </div>
     </div>
