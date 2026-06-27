@@ -1,187 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Privacy Policy | Prime Risk Advisory</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="description"
-        content="Privacy Policy of Prime Risk Advisory - Your data protection is our priority. Learn how we collect, use, and protect your information.">
+        content="Read the Privacy Policy of Prime Risk Advisory to understand what information we collect, how we use it, and how you can contact us about privacy-related questions.">
 
-    <!-- Preload critical CSS for instant render -->
     <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="icon" type="image/png" href="images/icon_logo.png">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/icon_logo.png">
 
-    <!-- Critical inline CSS for above-the-fold -->
     <style>
+        body {
+            background: #f8fafc;
+        }
+
         .site-header {
-            padding: clamp(32px, 8vw, 40px)clamp(20px, 5vw, 24px);
-            text-align: center
+            background: linear-gradient(135deg, #0f172a, #0dcaf0);
+            text-align: center;
+            padding: clamp(36px, 8vw, 56px) clamp(20px, 5vw, 24px);
+            color: #fff;
         }
 
         .hero-heading {
-            font-size: clamp(28px, 6vw, 36px);
+            font-size: clamp(30px, 6vw, 38px);
+            line-height: 1.2;
             margin: 0;
             color: #fff;
-            font-weight: 500
+            font-weight: 700;
         }
 
-        .section-light {
-            max-width: 800px;
-            margin: clamp(48px, 8vw, 72px)auto;
-            padding: clamp(24px, 5vw, 40px)clamp(3%, 5vw, 5%)
+        .policy-subtitle {
+            margin: 14px auto 0;
+            max-width: 680px;
+            color: #dbeafe;
+            font-size: clamp(14px, 2vw, 16px);
+            line-height: 1.7;
         }
 
-        h3 {
-            margin: 2rem 0 1rem;
-            font-size: clamp(19px, 3vw, 22px);
-            color: #0f172a
+        .policy-wrap {
+            max-width: 860px;
+            margin: clamp(32px, 6vw, 56px) auto;
+            padding: 0 16px;
         }
 
-        ul {
-            margin: 1rem 0 0 1.5rem;
-            padding-left: 1rem
+        .policy-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08);
+            padding: clamp(24px, 4vw, 40px);
         }
 
-        li {
-            margin-bottom: .5rem;
-            line-height: 1.6
+        .policy-summary {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #0dcaf0;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 28px;
+            color: #334155;
+            line-height: 1.7;
         }
 
-        .small-note {
-            font-size: clamp(14px, 2vw, 15px);
+        .policy-meta {
+            font-size: 14px;
             color: #64748b;
-            line-height: 1.7
+            margin-bottom: 22px;
+        }
+
+        .policy-section + .policy-section {
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .policy-section h2 {
+            font-size: clamp(22px, 3vw, 26px);
+            color: #0f172a;
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+
+        .policy-section p,
+        .policy-section li {
+            color: #334155;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .policy-section p + p {
+            margin-top: 12px;
+        }
+
+        .policy-section ul {
+            margin: 12px 0 0 20px;
+        }
+
+        .policy-section li + li {
+            margin-top: 8px;
+        }
+
+        .policy-note {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .contact-panel {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-top: 12px;
+        }
+
+        .contact-panel a {
+            color: #0369a1;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-panel a:hover {
+            text-decoration: underline;
+        }
+
+        .policy-footer-note {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.7;
         }
 
         footer {
             text-align: center;
-            padding: 2rem 1rem
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 24px 20px;
+            font-size: 13.5px;
+        }
+
+        footer a {
+            color: #e2e8f0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .policy-card {
+                border-radius: 12px;
+                padding: 22px 16px;
+            }
+
+            .policy-section p,
+            .policy-section li {
+                font-size: 14.5px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="site-header" style="background:linear-gradient(135deg,#0f172a,#0dcaf0)">
+    <header class="site-header">
         <h1 class="hero-heading">Privacy Policy</h1>
-        <p class="small-note" style="color:#e0f2fe;margin-top:1rem;max-width:600px;margin-inline:auto">
-            Last updated: February 15, 2026
+        <p class="policy-subtitle">
+            This Privacy Policy explains how Prime Risk Advisory collects, uses, and protects information submitted through this website.
         </p>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="section-light" role="main">
-        <p class="small-note" style="font-size:clamp(15px,2.2vw,16px);font-weight:500">
-            Prime Risk Advisory respects your privacy and is committed to protecting it through our responsible data
-            practices.
-        </p>
+    <main class="policy-wrap" role="main">
+        <div class="policy-card">
+            <p class="policy-meta"><strong>Effective date:</strong> June 27, 2026</p>
 
-        <section>
-            <h3>1. Information We Collect</h3>
-            <ul>
-                <li><strong>Contact Information:</strong> Name, email, phone, and organization details submitted via
-                    secure inquiry forms</li>
-                <li><strong>Technical Data:</strong> Browser type, IP address, device information, and usage patterns
-                    (anonymized)</li>
-                <li><strong>Usage Data:</strong> Pages visited, time spent, and referral sources for analytics</li>
-            </ul>
-        </section>
+            <div class="policy-summary">
+                We collect limited information that you choose to submit through contact or consultation forms, along with basic website usage information and analytics data. We use this information to respond to enquiries, operate the website, improve performance, and protect the site from misuse.
+            </div>
 
-        <section>
-            <h3>2. How We Use Your Information</h3>
-            <ul>
-                <li>Respond to your inquiries and provide tailored advisory services</li>
-                <li>Improve website functionality, performance, and user experience</li>
-                <li>Ensure security and prevent fraudulent activities</li>
-                <li>Comply with applicable laws and regulatory requirements</li>
-                <li>Send important service updates (with opt-out option)</li>
-            </ul>
-        </section>
+            <section class="policy-section">
+                <h2>1. Who We Are</h2>
+                <p>
+                    Prime Risk Advisory is an independent risk intelligence, due diligence, verification, and investigation services firm serving clients in India.
+                </p>
+                <p>
+                    If you have questions about this Privacy Policy or how your information is handled, you can contact us using the details listed below.
+                </p>
+            </section>
 
-        <section>
-            <h3>3. Data Protection Measures</h3>
-            <p class="small-note">
-                We implement industry-standard administrative, technical, and physical safeguards including:
+            <section class="policy-section">
+                <h2>2. Information We Collect</h2>
+                <p>We may collect the following categories of information:</p>
+                <ul>
+                    <li><strong>Information you submit directly:</strong> such as your name, email address, phone number, organisation name, service requirement, and message when you contact us through the website.</li>
+                    <li><strong>Technical and usage information:</strong> such as browser type, device type, approximate location, pages visited, date and time of access, and referring pages.</li>
+                    <li><strong>Analytics and cookie-related information:</strong> where analytics tools or cookies are used to understand website performance and visitor interaction.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>3. How We Use Information</h2>
+                <p>We may use collected information to:</p>
+                <ul>
+                    <li>Respond to enquiries and consultation requests.</li>
+                    <li>Communicate about requested services.</li>
+                    <li>Operate, maintain, and improve the website.</li>
+                    <li>Monitor security, detect misuse, and protect the integrity of the website.</li>
+                    <li>Comply with applicable legal, regulatory, or lawful process requirements.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>4. Legal and Service-Related Sharing</h2>
+                <p>
+                    We do not sell or rent personal information submitted through this website.
+                </p>
+                <p>We may share information in limited circumstances, including:</p>
+                <ul>
+                    <li>With service providers who support website hosting, analytics, communications, or technical operations.</li>
+                    <li>Where disclosure is required by law, regulation, court order, or lawful governmental request.</li>
+                    <li>Where necessary to protect rights, safety, security, or prevent fraud or misuse.</li>
+                    <li>As part of a business transition, restructuring, or transfer, where legally permitted.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>5. Cookies and Analytics</h2>
+                <p>
+                    This website may use cookies or similar technologies for website functionality, security, and analytics. Cookies are small text files stored on your device that help websites operate and provide usage insights.
+                </p>
+                <p>
+                    We use Google Analytics to understand how visitors interact with the website, such as which pages are visited, how users arrive at the site, and general engagement patterns. Google Analytics may collect information through cookies or similar technologies.
+                </p>
+                <p>
+                    You can control or delete cookies through your browser settings, and you can learn more about how Google uses data in connection with its services through Google’s privacy and cookie information pages.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>6. Data Retention</h2>
+                <p>
+                    We retain information only for as long as reasonably necessary for enquiry handling, internal record-keeping, security, operational needs, or legal compliance.
+                </p>
+                <p>
+                    Retention periods may vary depending on the nature of the enquiry, the purpose for which information was collected, and applicable legal or business requirements.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>7. Data Security</h2>
+                <p>
+                    We use reasonable administrative, technical, and organisational measures designed to protect information submitted through this website.
+                </p>
+                <p>
+                    However, no method of internet transmission or electronic storage is completely secure, and we cannot guarantee absolute security.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>8. Your Choices and Rights</h2>
+                <p>
+                    Depending on applicable law, you may have rights relating to information about you, including the right to request access, correction, or deletion of certain personal information.
+                </p>
+                <p>
+                    To make a privacy-related request, contact us using the contact details below. We may need to verify your request before responding.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>9. Third-Party Links</h2>
+                <p>
+                    This website may contain links to third-party websites or services. We are not responsible for the privacy practices, content, or policies of third-party sites.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>10. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time to reflect operational, legal, or website-related changes. The updated version will be posted on this page with a revised effective date.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>11. Contact</h2>
+                <p class="policy-note">
+                    For privacy-related questions or requests, please contact:
+                </p>
+
+                <div class="contact-panel">
+                    <p><strong>Prime Risk Advisory</strong></p>
+                    <p><strong>Email:</strong> <a href="mailto:amol@primeriskadvisory.in">amol@primeriskadvisory.in</a></p>
+                    <p><strong>Website:</strong> <a href="https://primeriskadvisory.in/">primeriskadvisory.in</a></p>
+                </div>
+            </section>
+
+            <p class="policy-footer-note">
+                This page should be reviewed whenever your website tools, tracking setup, or data-handling practices change.
             </p>
-            <ul>
-                <li>SSL/TLS encryption for all form submissions</li>
-                <li>Secure cloud hosting with access controls</li>
-                <li>Regular security audits and vulnerability assessments</li>
-                <li>Data anonymization where possible</li>
-                <li>Employee training on data protection best practices</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>4. Third-Party Disclosure</h3>
-            <p class="small-note">
-                We <strong>do not sell or rent</strong> your personal data to third parties. Data sharing occurs only in
-                these limited cases:
-            </p>
-            <ul>
-                <li>With your explicit consent</li>
-                <li>Service providers under strict confidentiality agreements (hosting, analytics)</li>
-                <li>Legal requirements or government requests</li>
-                <li>Business transfers (mergers, acquisitions)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>5. Data Retention</h3>
-            <p class="small-note">
-                Inquiry data is retained only as long as necessary to fulfill your request (typically 12 months).
-                Technical logs are kept for 90 days for security purposes.
-            </p>
-        </section>
-
-        <section>
-            <h3>6. Your Rights</h3>
-            <ul>
-                <li><strong>Access:</strong> Request a copy of your personal data</li>
-                <li><strong>Correction:</strong> Update inaccurate information</li>
-                <li><strong>Deletion:</strong> Request removal of your data (subject to legal obligations)</li>
-                <li><strong>Opt-out:</strong> Unsubscribe from communications</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>7. Cookies & Tracking</h3>
-            <p class="small-note">
-                This website uses essential cookies for functionality and Google Analytics (anonymized).
-                You can manage preferences via browser settings.
-            </p>
-        </section>
-
-        <section>
-            <h3>8. Contact Us</h3>
-            <p class="small-note">
-                For privacy-related questions or to exercise your rights, contact:
-            </p>
-            <p style="margin:1rem 0;font-weight:600">
-                <strong>Email:</strong> <a href="mailto:amol@primeriskadvisory.in">amol@primeriskadvisory.in</a><br>
-                <strong>Website:</strong> <a href="https://www.primeriskadvisory.in">primeriskadvisory.in</a>
-            </p>
-        </section>
-
-        <p class="small-note"
-            style="border-top:1px solid #e2e8f0;padding-top:2rem;margin-top:3rem;text-align:center;font-size:clamp(13px,1.8vw,14px)">
-            This Privacy Policy is effective February 15, 2026. We may update it periodically.
-        </p>
+        </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer
-        style="background:#0f172a;color:#94a3b8;padding:2rem clamp(1rem,5vw,3rem);text-align:center;font-size:clamp(13px,2vw,13.5px)">
+    <footer>
         <p>© 2026 Prime Risk Advisory. All rights reserved.</p>
-        <p><a href="https://www.primeriskadvisory.in" style="color:#94a3b8">← Back to Main Site</a></p>
+        <p><a href="https://primeriskadvisory.in/">← Back to Main Site</a></p>
     </footer>
-
-    <!-- Load main stylesheet after critical CSS -->
-    <noscript>
-        <link rel="stylesheet" href="css/style.css">
-    </noscript>
 </body>
-
 </html>
