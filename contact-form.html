@@ -1,97 +1,84 @@
-<!-- ✅ EMBEDDED SECURE CONTACT MODAL (UPDATED CONTENT, SAME WORKING STRUCTURE) -->
 <div class="contact-modal" id="contactModal" role="dialog" aria-modal="true"
     aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
     <div class="modal-overlay" id="closeModal"></div>
-    <div class="modal-content secure-modal">
-        <button class="modal-close" id="modalCloseBtn" aria-label="Close">×</button>
-        <div class="secure-badge">Secure & Confidential Channel</div>
+
+    <div class="modal-content secure-modal consultation-modal">
+        <button class="modal-close" id="modalCloseBtn" type="button" aria-label="Close consultation form">×</button>
+
+        <div class="secure-badge">Secure &amp; Confidential Consultation</div>
         <h2 id="contactModalTitle">Request a Confidential Consultation</h2>
         <p class="modal-note secure-note" id="contactModalDesc">
-            This secure channel is intended for confidential consultation requests related to due diligence,
-            verification, risk intelligence, and investigation services. Information is accessible only to authorized
-            personnel. Please do not include passwords, OTPs, full account numbers, or highly sensitive personal data
-            in the initial message.
+            Please share only high-level details. Do not include passwords, OTPs, account numbers, or highly sensitive personal information.
         </p>
 
-        <form class="contact-form"
+        <form class="contact-form consultation-form"
             action="https://script.google.com/macros/s/AKfycbyf_-rOi88GFxIeMnoUQJcVCsEUdtvs88hKjhKgi4oGYyfjIcn9o9bcIDZjInsORMRG/exec"
             method="POST" novalidate>
 
             <input type="hidden" name="_csrf" value="generate-unique-token">
             <input type="hidden" name="source" value="Prime Risk Advisory Website Consultation Form">
-            <input type="hidden" name="confidentiality" value="Privileged & Confidential">
+            <input type="hidden" name="confidentiality" value="Privileged &amp; Confidential">
             <input type="hidden" name="hp_email" autocomplete="off">
 
-            <label for="name">Full Name *
-                <input id="name" type="text" name="name" required autocomplete="name" placeholder="Full Name">
-            </label>
+            <p class="form-helper">Fields marked with <span>*</span> are required.</p>
 
-            <label for="email">Email Address *
-                <input id="email" type="email" name="email" required autocomplete="email"
-                    placeholder="your.email@example.com">
-            </label>
-
-            <label for="phone">Phone
-                <input id="phone" type="tel" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
-            </label>
-
-            <label for="org">Organization / Institution
-                <input id="org" type="text" name="organization" placeholder="Organization / Institution name"
-                    autocomplete="organization">
-            </label>
-
-            <label for="service">Service Type *
-                <select id="service" name="service_type" required>
-                    <option value="">Select a service</option>
-                    <option value="banking-financial-services">Banking & Financial Institution Services</option>
-                    <option value="credit-due-diligence">Credit Due Diligence</option>
-                    <option value="borrower-background-verification">Promoter & Borrower Background Verification</option>
-                    <option value="ews-investigations">Early Warning Signal (EWS) Investigations</option>
-                    <option value="fraud-risk-investigations">Fraud Risk Investigations</option>
-                    <option value="portfolio-asset-quality-reviews">Portfolio & Asset Quality Reviews</option>
-                    <option value="recovery-support-intelligence">Recovery Support Intelligence</option>
-                    <option value="corporate-risk-solutions">Corporate Risk Solutions</option>
-                    <option value="employee-background-verification">Employee Background Verification</option>
-                    <option value="executive-due-diligence">Executive Due Diligence</option>
-                    <option value="vendor-supplier-verification">Vendor & Supplier Verification</option>
-                    <option value="corporate-investigations">Corporate Investigations</option>
-                    <option value="business-partner-due-diligence">Business Partner Due Diligence</option>
-                    <option value="conflict-of-interest-investigations">Conflict of Interest Investigations</option>
-                    <option value="fraud-misconduct-investigations">Fraud & Misconduct Investigations</option>
-                    <option value="asset-tracing">Asset Tracing</option>
-                    <option value="workplace-integrity-investigations">Workplace Integrity Investigations</option>
-                    <option value="matrimonial-family-verification">Matrimonial & Family Verification Services</option>
-                    <option value="pre-marriage-verification">Pre-Marriage Verification</option>
-                    <option value="property-verification-services">Property Verification Services</option>
-                    <option value="ownership-verification">Ownership Verification</option>
-                    <option value="builder-background-verification">Builder Background Verification</option>
-                    <option value="independent-property-due-diligence">Independent Property Due Diligence</option>
-                    <option value="other">Other / Not Sure</option>
-                </select>
-            </label>
-
-            <label for="message">Nature of Inquiry
-                <textarea id="message" name="message" rows="4"
-                    placeholder="Share a brief description of your requirement. Please provide only high-level details in the initial enquiry."></textarea>
-            </label>
-
-            <div class="secure-footer">
-                <span>🔒 Confidential submission</span>
-                <span>🛡️ Restricted professional access</span>
+            <div class="form-field">
+                <label for="name">Full Name <span>*</span></label>
+                <input id="name" type="text" name="name" required aria-required="true"
+                    autocomplete="name" placeholder="Enter your full name">
             </div>
 
-            <p id="formFeedback" class="small-note" style="display:none;" role="alert" aria-live="polite"></p>
+            <div class="form-field">
+                <label for="email">Email Address <span>*</span></label>
+                <input id="email" type="email" name="email" required aria-required="true"
+                    autocomplete="email" placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Phone Number <small>(Optional)</small></label>
+                <input id="phone" type="tel" name="phone" autocomplete="tel"
+                    placeholder="+91 XXXXX XXXXX">
+            </div>
+
+            <div class="form-field">
+                <label for="service">Service Required <span>*</span></label>
+                <select id="service" name="service_type" required aria-required="true">
+                    <option value="">Select a service</option>
+                    <option value="banking-financial-risk-advisory">Banking &amp; Financial Risk Advisory</option>
+                    <option value="corporate-risk-solutions">Corporate Risk Solutions</option>
+                    <option value="employee-background-verification">Employee Background Verification</option>
+                    <option value="corporate-investigations">Corporate Investigations</option>
+                    <option value="matrimonial-verification">Matrimonial Verification</option>
+                    <option value="property-verification">Property Verification</option>
+                    <option value="strategic-intelligence">Strategic Intelligence &amp; Investigations</option>
+                    <option value="other">Other / Not Sure</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="message">Brief Requirement <span>*</span></label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"
+                    placeholder="Briefly describe your requirement in 2–4 lines. Please share only high-level information."></textarea>
+            </div>
+
+            <div class="trust-strip">
+                <span>🔒 Confidential submission</span>
+                <span>🛡️ Reviewed by authorized personnel only</span>
+            </div>
+
+            <p id="formFeedback" class="form-feedback" style="display:none;" role="alert" aria-live="polite"></p>
 
             <button type="submit" class="form-submit secure-submit">
                 <span class="btn-text">Submit Confidential Request</span>
                 <span class="btn-spinner" aria-hidden="true"></span>
             </button>
 
-            <p class="small-note">All enquiries are reviewed subject to independence and conflict-of-interest checks.</p>
+            <p class="form-bottom-note">
+                All enquiries are subject to independence and conflict-of-interest review.
+            </p>
         </form>
 
-        <!-- SUCCESS STATE -->
-        <div class="success-state" hidden role="status" aria-live="polite">
+        <div class="success-state" hidden aria-hidden="true" role="status" aria-live="polite">
             <div class="success-check">✓</div>
             <h3>Request Submitted</h3>
             <p>Your confidential consultation request has been received. Our team will review it and respond appropriately.</p>
