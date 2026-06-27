@@ -1,196 +1,191 @@
-# 🚀 Prime Risk Advisory — Client Website
+# Prime Risk Advisory — Client Website
 
-<p align="center">
-  <strong>High-performance, trust-focused business website for a Risk & Compliance consulting firm</strong>
-</p>
+Production website developed for a real client in the risk intelligence and due diligence space, updated with a stronger service architecture, consultation-led enquiry flow, revised legal pages, and cleaner crawl/indexing setup. The project is structured to present a more authoritative business presence while keeping the stack lightweight and maintainable.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Project-Real%20Client-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Performance-Optimized-brightgreen?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Deployment-GitHub%20Pages-black?style=for-the-badge" />
-</p>
+**Live site:** [primeriskadvisory.in](https://primeriskadvisory.in/)
 
 ---
 
-## 🌐 Live Website
+## Project summary
 
-👉 **https://primeriskadvisory.in/**
+Prime Risk Advisory needed a professional, trust-oriented business website that could do more than act as a digital brochure. The updated version improved service clarity, enquiry quality, legal-page structure, and technical SEO hygiene.
 
----
-
-## ⚡ Recruiter Snapshot
-
-* 🏢 **Type:** Real client production project
-* 🎯 **Role:** End-to-end frontend development
-* 📱 **Responsive:** Mobile-first implementation
-* 🔒 **Security:** Spam-protected secure form flow
-* ⚡ **Performance:** Lightweight static architecture
-* 🚀 **Deployment:** GitHub Pages + custom domain
+The current implementation focuses on:
+- stronger positioning for risk intelligence and due diligence services,
+- clearer service segmentation for business and personal verification use cases,
+- a confidential consultation workflow,
+- better legal/compliance page structure,
+- lightweight deployment with minimal operational overhead.
 
 ---
 
-## 📌 Project Overview
+## What changed in this update
 
-Developed a **production-grade responsive corporate website** for Prime Risk Advisory to establish a strong digital presence and enable secure client inquiries.
+Today’s code changes expanded the project from a simple brochure-style business site into a more structured service website.
 
-The solution focuses on:
+### Content and positioning updates
+- Reworked hero messaging around decision risk and verified intelligence
+- Strengthened brand positioning and trust language
+- Added deeper service segmentation instead of a single generic services block
+- Introduced dedicated sections for:
+  - Banking & Financial Risk Advisory
+  - Corporate Risk Solutions
+  - Employee Background Verification
+  - Corporate Investigations
+  - Matrimonial Verification
+  - Property Verification
+  - Strategic Intelligence & Investigations
+- Added case studies and a knowledge-centre placeholder for future authority content
 
-* High-trust financial UI
-* Fast loading performance
-* Secure lead capture
-* Professional brand presentation
-* SEO-ready structure
+### Navigation and UX updates
+- Expanded navigation structure with service dropdown links
+- Added clearer internal anchor-based information architecture
+- Improved consultation-driven CTA flow
+- Added a more structured confidential consultation form experience
 
----
+### Form and lead-capture updates
+- Improved the consultation modal with:
+  - clearer confidentiality guidance,
+  - high-level information warning,
+  - required-field clarity,
+  - service-specific intake selection,
+  - better submission trust messaging,
+  - success-state handling.
+- Continued to use a lightweight Google Apps Script submission workflow with spam protection.
 
-## 🎯 Business Problem
-
-The client lacked:
-
-* Professional web presence
-* Secure inquiry mechanism
-* Mobile-optimized experience
-* Strong online credibility
-
-✅ Delivered a complete modern web solution addressing all gaps.
-
----
-
-## 💡 Technical Solution
-
-Implemented a **lightweight static frontend** integrated with Google Apps Script to avoid heavy backend infrastructure while maintaining security.
-
-### Key Engineering Decisions
-
-* Vanilla JavaScript for minimal bundle size
-* Google Apps Script for serverless form handling
-* Honeypot field for bot prevention
-* Content Security Policy hardening
-* Mobile-first responsive CSS
-* Semantic SEO markup
-
----
-
-## ✨ Core Features
-
-### 🎨 Frontend
-
-* Professional corporate UI
-* Sticky responsive navbar
-* Smooth scrolling navigation
-* Animated hero section
-* Services grid with reveal effects
-* Fully responsive across devices
-
-### 🔒 Security
-
-* Content Security Policy (CSP)
-* Honeypot anti-spam protection
-* Secure async form submission
-* No sensitive data stored client-side
-
-### 📬 Lead Capture System
-
-* Confidential discussion modal
-* Google Sheets auto-logging
-* Success state feedback
-* Bot filtering workflow
-
-### 📈 Performance & SEO
-
-* Semantic HTML structure
-* Optimized CSS delivery
-* Meta tags & schema markup
-* Core Web Vitals friendly
-* Fast load time (~<2s)
+### Legal and technical updates
+- Rewrote `privacy-policy.html` in clearer plain language
+- Rewrote `terms.html` with a more defensible, readable structure
+- Cleaned up `robots.txt`
+- Simplified `sitemap.xml` to include only canonical indexable URLs
+- Improved consistency between crawl rules, `noindex` usage, and legal-page behavior
 
 ---
 
-## 🧰 Tech Stack
+## My role
 
-| Layer        | Technology              |
-| ------------ | ----------------------- |
-| Frontend     | HTML5, CSS3, JavaScript |
-| Form Backend | Google Apps Script      |
-| Hosting      | GitHub Pages            |
-| Domain       | GoDaddy                 |
+Handled the project end to end as the frontend developer and implementation owner.
+
+### Responsibilities
+- Frontend architecture and page implementation
+- Responsive UI development
+- Service-page content structuring within a single-page site
+- Consultation modal and form integration
+- Spam-protection setup
+- Legal page implementation
+- Technical SEO cleanup
+- Production deployment and live-site updates
 
 ---
 
-## 📁 Project Structure
+## Tech stack
 
-```
+- HTML5
+- CSS3
+- JavaScript
+- Google Apps Script
+- GitHub Pages
+- GoDaddy DNS / custom domain
+
+---
+
+## Key features
+
+### Frontend
+- Responsive corporate website
+- Sticky navigation
+- Multi-section service-focused layout
+- Hero messaging with trust-oriented positioning
+- Mobile-first styling
+- Dedicated legal pages
+
+### Lead capture
+- Confidential consultation modal
+- Service-specific enquiry routing through form selection
+- Google Apps Script submission flow
+- Google Sheets logging
+- Success/error feedback states
+
+### Security and reliability
+- Honeypot anti-spam field
+- Content Security Policy setup
+- No sensitive data stored on the client
+- Lightweight static deployment model
+
+### SEO and structure
+- Semantic HTML structure
+- Meta tags and Open Graph setup
+- Schema markup for organization details
+- Cleaned robots.txt and sitemap.xml setup
+- Improved service discoverability through clearer section architecture
+
+---
+
+## Engineering decisions
+
+### Why static architecture
+A static frontend kept the project fast, simple to host, and easier for a small business client to maintain.
+
+### Why Google Apps Script
+Google Apps Script provided a practical serverless path for handling consultation requests without introducing backend hosting complexity.
+
+### Why the service restructure mattered
+The earlier version grouped services too broadly. The updated architecture breaks service offerings into clearer sections so users can better understand the business scope and future content expansion becomes easier.
+
+### Why the legal/SEO cleanup mattered
+The legal pages, robots configuration, and sitemap structure were refined so the site behaves more predictably for users and crawlers while staying aligned with the actual public-page setup.
+
+---
+
+## Outcome
+
+This update moved the project closer to a production-grade consulting website by improving:
+- business credibility,
+- service clarity,
+- consultation quality,
+- legal-page readability,
+- technical SEO hygiene,
+- maintainability of the public website structure.
+
+> Add measured evidence here later if available, such as Lighthouse scores, enquiry conversion improvements, or before/after screenshots.
+
+---
+
+## Project structure
+
+```text
 Prime-Risk-Advisory/
-│
 ├── index.html
-├── contact-form.html
-│
+├── privacy-policy.html
+├── terms.html
+├── robots.txt
+├── sitemap.xml
 ├── css/
 │   └── style.css
-│
 ├── js/
 │   └── script.js
-│
 └── images/
-    └── icon_logo.png
+    ├── icon_logo.png
+    └── favicon.png
 ```
 
 ---
 
-## 📊 Measurable Impact
+## What this project demonstrates
 
-* 🚀 Delivered real client production website
-* 📱 Achieved full mobile responsiveness
-* 🔒 Implemented secure form pipeline
-* ⚡ Improved page load performance
-* 🛡️ Reduced automated spam submissions
-* 📈 Strengthened client’s digital credibility
-
----
-
-## 👨‍💻 My Responsibilities
-
-**Full Website Development**
-
-* Frontend architecture
-* Responsive UI implementation
-* Secure form integration
-* Performance optimization
-* Security hardening
-* Production deployment
+- Real client delivery
+- Production-ready frontend implementation
+- Responsive corporate website development
+- Secure consultation workflow integration
+- Practical legal-page implementation
+- Static-site SEO and crawl-management basics
+- Business-focused UX thinking for trust-sensitive services
 
 ---
 
-## 🏢 Client
+## Client note
 
-**Prime Risk Advisory**
-Independent Risk & Compliance Consulting Practice
+This was developed for **Prime Risk Advisory** as a real client project.
 
-> All branding and business content belong to the client.
-
----
-
-## 📌 Why This Project Matters
-
-This project demonstrates ability to:
-
-* Deliver real client work
-* Build production-ready websites
-* Design trust-focused financial UI
-* Implement secure form workflows
-* Optimize frontend performance
-* Deploy live business solutions
-
----
-
-## 📜 License
-
-Client project — proprietary to Prime Risk Advisory.
-Code implementation by **Hitesh Mane**.
-
----
-
-<p align="center">
-  <strong>Prime Risk Advisory — Facts before Conclusions</strong>
-</p>
+Business branding and content belong to the client.  
+Code implementation and frontend development by **Hitesh Mane**.
