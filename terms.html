@@ -1,233 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Terms & Conditions | Prime Risk Advisory</title>
     <meta name="robots" content="noindex,nofollow">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="description"
-        content="Terms & Conditions governing use of Prime Risk Advisory website and services. Last updated February 15, 2026.">
+        content="Read the Terms & Conditions governing use of the Prime Risk Advisory website and related communications.">
 
-    <!-- Preload CSS -->
     <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="icon" type="image/png" href="images/icon_logo.png">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/icon_logo.png">
 
-    <!-- Critical CSS (compact spacing) -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             color: #334155;
             background: #f8fafc;
-            line-height: 1.6
+            line-height: 1.7;
+            margin: 0;
         }
 
         .site-header {
             background: linear-gradient(135deg, #0f172a, #0dcaf0);
             color: #fff;
             text-align: center;
-            padding: 2rem 1.5rem
+            padding: clamp(36px, 7vw, 56px) 20px;
         }
 
         .hero-heading {
-            font-size: clamp(24px, 5vw, 32px);
+            font-size: clamp(28px, 5vw, 38px);
+            line-height: 1.2;
             margin: 0;
-            font-weight: 500;
-            color: #fff
+            font-weight: 700;
+            color: #fff;
         }
 
-        .main-content {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1.5rem 2rem;
+        .hero-note {
+            margin: 14px auto 0;
+            max-width: 680px;
+            color: #dbeafe;
+            font-size: 15px;
+        }
+
+        .terms-wrap {
+            max-width: 860px;
+            margin: clamp(32px, 6vw, 56px) auto;
+            padding: 0 16px;
+        }
+
+        .terms-card {
             background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08);
+            padding: clamp(24px, 4vw, 40px);
+        }
+
+        .terms-meta {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .terms-summary {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #0dcaf0;
             border-radius: 12px;
-            box-shadow: 0 7px 30px rgba(0, 0, 0, .04)
+            padding: 16px 18px;
+            margin-bottom: 28px;
+            color: #334155;
         }
 
-        h2 {
-            font-size: clamp(22px, 4vw, 28px);
-            margin: 0 0 1.5rem;
+        .terms-section + .terms-section {
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .terms-section h2 {
+            font-size: clamp(21px, 3vw, 26px);
             color: #0f172a;
-            position: relative
+            margin: 0 0 12px;
+            line-height: 1.25;
         }
 
-        h2::after {
-            content: "";
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, #0dcaf0, #fcd34d);
-            border-radius: 2px
-        }
-
-        h3 {
-            margin: 2rem 0 1rem;
-            font-size: clamp(18px, 3vw, 20px);
-            color: #0f172a;
-            font-weight: 600
-        }
-
-        p {
-            font-size: clamp(14px, 2vw, 15px);
-            margin-bottom: 1.2rem;
+        .terms-section p,
+        .terms-section li {
+            font-size: 15px;
             color: #475569;
-            line-height: 1.7
+            line-height: 1.8;
         }
 
-        ul {
-            margin: 1rem 0 1.5rem 1.5rem
+        .terms-section p + p {
+            margin-top: 12px;
         }
 
-        li {
-            font-size: clamp(14px, 2vw, 15px);
-            margin-bottom: .8rem;
-            color: #475569;
-            line-height: 1.6;
-            position: relative;
-            padding-left: .5rem
+        .terms-section ul {
+            margin: 12px 0 0 20px;
+            padding: 0;
         }
 
-        li::before {
-            content: "→";
-            position: absolute;
-            left: -1.5rem;
-            color: #0dcaf0;
-            font-weight: bold
+        .terms-section li + li {
+            margin-top: 8px;
         }
 
-        .footer {
-            padding: 1.5rem 2rem;
+        .contact-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-top: 12px;
+        }
+
+        .contact-box a {
+            color: #0369a1;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .related-link {
+            color: #0369a1;
+            text-decoration: none;
+        }
+
+        .related-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        footer {
+            text-align: center;
             background: #0f172a;
             color: #94a3b8;
-            text-align: center;
-            font-size: clamp(13px, 2vw, 13.5px)
+            padding: 24px 20px;
+            font-size: 13.5px;
         }
 
-        .back-link {
-            color: #94a3b8;
+        footer a {
+            color: #e2e8f0;
             text-decoration: none;
-            font-weight: 500;
-            transition: color .3s
         }
 
-        .back-link:hover {
-            color: #fcd34d
+        footer a:hover {
+            text-decoration: underline;
         }
 
-        @media(max-width:480px) {
-            .main-content {
-                padding: 1.5rem 1rem;
-                margin: 1.5rem 1rem
+        @media (max-width: 480px) {
+            .terms-card {
+                padding: 22px 16px;
+                border-radius: 12px;
+            }
+
+            .terms-section p,
+            .terms-section li {
+                font-size: 14.5px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- HEADER -->
     <header class="site-header">
         <h1 class="hero-heading">Terms & Conditions</h1>
-        <p style="margin:.5rem 0 0;font-size:clamp(13px,2vw,14px);opacity:.9">Last updated: February 15, 2026</p>
+        <p class="hero-note">
+            These Terms & Conditions govern your use of the Prime Risk Advisory website and related website communications.
+        </p>
     </header>
 
-    <!-- MAIN CONTENT (Compact) -->
-    <main class="main-content">
-        <p style="font-weight:500;font-size:clamp(15px,2.2vw,16px);color:#334155;margin-bottom:1.5rem">
-            By accessing this website or using our services, you agree to be bound by these Terms and Conditions
-            and all applicable laws and regulations.
-        </p>
+    <main class="terms-wrap" role="main">
+        <div class="terms-card">
+            <p class="terms-meta"><strong>Effective date:</strong> June 27, 2026</p>
 
-        <section>
-            <h3>1. Website Use & Content</h3>
-            <p>All content is provided for <strong>general informational purposes only</strong> and does not constitute
-                professional, legal, or financial advice.</p>
-            <ul>
-                <li>No warranty of accuracy or completeness</li>
-                <li>Content may change without notice</li>
-                <li>Users assume all risks of use</li>
-            </ul>
-        </section>
+            <div class="terms-summary">
+                By accessing this website, you agree to these Terms & Conditions. Website content is provided for general informational purposes only and does not create a client relationship unless a formal written engagement is entered into.
+            </div>
 
-        <section>
-            <h3>2. No Client Relationship</h3>
-            <p>Accessing this website, submitting inquiries, or receiving responses <strong>does not create</strong> a
-                client-consultant relationship unless expressly agreed upon in a signed written engagement letter.</p>
-        </section>
+            <section class="terms-section">
+                <h2>1. Website Use</h2>
+                <p>
+                    This website is provided for general informational purposes relating to Prime Risk Advisory and its services.
+                </p>
+                <p>
+                    You agree to use this website lawfully and in a manner that does not interfere with website operation, security, or other users’ access.
+                </p>
+            </section>
 
-        <section>
-            <h3>3. Confidentiality & Sensitive Information</h3>
-            <p>Website forms and email communications are <strong>not secure channels</strong> for sensitive
-                information:</p>
-            <ul>
-                <li>Do not submit passwords, account numbers, or confidential data</li>
-                <li>Secure transmission available only after formal engagement</li>
-                <li>All formal engagements protected by strict confidentiality agreements</li>
-            </ul>
-        </section>
+            <section class="terms-section">
+                <h2>2. Informational Content Only</h2>
+                <p>
+                    Content on this website is provided for general information only and should not be treated as legal, financial, investigative, or professional advice for any specific matter.
+                </p>
+                <p>
+                    While we aim to keep website content accurate and current, we do not guarantee that all content is complete, current, or error-free.
+                </p>
+            </section>
 
-        <section>
-            <h3>4. Intellectual Property</h3>
-            <p>All website content, design, and materials are protected by copyright and remain the property of Prime
-                Risk Advisory.</p>
-            <ul>
-                <li>Limited personal, non-commercial use permitted</li>
-                <li>Commercial use requires written permission</li>
-                <li>No reproduction without attribution</li>
-            </ul>
-        </section>
+            <section class="terms-section">
+                <h2>3. No Client Relationship</h2>
+                <p>
+                    Visiting this website, submitting a form, sending an email, or receiving a response from us does not by itself create a client, consultant, advisory, fiduciary, or professional engagement relationship.
+                </p>
+                <p>
+                    A formal relationship exists only when both parties enter into a clear written engagement or service arrangement.
+                </p>
+            </section>
 
-        <section>
-            <h3>5. Limitation of Liability</h3>
-            <p>To the maximum extent permitted by law, Prime Risk Advisory shall <strong>not be liable</strong> for:</p>
-            <ul>
-                <li>Any direct, indirect, incidental, or consequential damages</li>
-                <li>Loss of data, profits, or business opportunities</li>
-                <li>Errors or omissions in content</li>
-                <li>Third-party website content or services</li>
-            </ul>
-        </section>
+            <section class="terms-section">
+                <h2>4. Enquiries and Sensitive Information</h2>
+                <p>
+                    Website forms and general email channels are intended for initial enquiries and high-level communication only.
+                </p>
+                <p>
+                    Please do not submit passwords, OTPs, bank account details, government identity numbers, or other highly sensitive personal or financial information through public website forms unless specifically requested through an appropriate channel after formal engagement.
+                </p>
+            </section>
 
-        <section>
-            <h3>6. Governing Law</h3>
-            <p>These Terms shall be governed by and construed in accordance with the <strong>laws of India</strong>. Any
-                disputes shall be subject to the exclusive jurisdiction of courts in Mumbai, Maharashtra.</p>
-        </section>
+            <section class="terms-section">
+                <h2>5. Intellectual Property</h2>
+                <p>
+                    Unless otherwise stated, website content including text, branding, layout, graphics, and original materials belongs to Prime Risk Advisory or is used with appropriate permission.
+                </p>
+                <p>
+                    You may view the website for personal, non-commercial use. You may not copy, reproduce, republish, distribute, modify, or commercially use website materials without prior written permission, except where permitted by law.
+                </p>
+            </section>
 
-        <section>
-            <h3>7. Changes to Terms</h3>
-            <p>We reserve the right to modify these Terms at any time. Continued use of the website after changes
-                constitutes acceptance of the new Terms.</p>
-        </section>
+            <section class="terms-section">
+                <h2>6. Third-Party Links</h2>
+                <p>
+                    This website may include links to third-party websites or services for convenience. We do not control and are not responsible for third-party content, security, or privacy practices.
+                </p>
+            </section>
 
-        <section>
-            <h3>8. Contact Information</h3>
-            <p>For questions regarding these Terms, please contact:</p>
-            <p style="font-weight:600;margin:1rem 0 .5rem">
-                <strong>Prime Risk Advisory</strong><br>
-                Email: <a href="mailto:amol@primeriskadvisory.in" style="color:#0dcaf0">amol@primeriskadvisory.in</a>
+            <section class="terms-section">
+                <h2>7. Limitation of Liability</h2>
+                <p>
+                    To the maximum extent permitted by applicable law, Prime Risk Advisory shall not be liable for losses or damages arising from use of, or reliance on, this website or its content.
+                </p>
+                <p>
+                    This includes indirect, incidental, consequential, special, or business-related losses, as well as interruptions, inaccuracies, delays, or website unavailability.
+                </p>
+            </section>
+
+            <section class="terms-section">
+                <h2>8. Privacy</h2>
+                <p>
+                    Use of this website may also involve the collection and handling of information as described in our
+                    <a class="related-link" href="privacy-policy.html">Privacy Policy</a>.
+                </p>
+            </section>
+
+            <section class="terms-section">
+                <h2>9. Changes to These Terms</h2>
+                <p>
+                    We may update these Terms & Conditions from time to time. Continued use of the website after any update means you accept the revised Terms to the extent permitted by law.
+                </p>
+            </section>
+
+            <section class="terms-section">
+                <h2>10. Governing Law</h2>
+                <p>
+                    These Terms & Conditions shall be governed by the laws of India. Any dispute relating to the website or these Terms shall be subject to applicable jurisdiction and venue under Indian law.
+                </p>
+            </section>
+
+            <section class="terms-section">
+                <h2>11. Contact</h2>
+                <p>
+                    For questions regarding these Terms & Conditions, please contact:
+                </p>
+
+                <div class="contact-box">
+                    <p><strong>Prime Risk Advisory</strong></p>
+                    <p>Email: <a href="mailto:amol@primeriskadvisory.in">amol@primeriskadvisory.in</a></p>
+                    <p>Website: <a href="https://primeriskadvisory.in/">primeriskadvisory.in</a></p>
+                </div>
+            </section>
+
+            <p class="footer-note">
+                These Terms & Conditions should be reviewed periodically and updated whenever your website practices, service model, or legal requirements change.
             </p>
-        </section>
+        </div>
     </main>
 
-    <!-- COMPACT FOOTER -->
-    <footer class="footer">
-        <p>© 2026 Prime Risk Advisory. All rights reserved. |
-            <a href="https://www.primeriskadvisory.in" class="back-link">← Back to Main Site</a>
-        </p>
+    <footer>
+        <p>© 2026 Prime Risk Advisory. All rights reserved.</p>
+        <p><a href="https://primeriskadvisory.in/">← Back to Main Site</a></p>
     </footer>
-
-    <noscript>
-        <link rel="stylesheet" href="css/style.css">
-    </noscript>
 </body>
-
 </html>
