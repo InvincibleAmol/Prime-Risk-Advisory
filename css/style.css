@@ -367,12 +367,6 @@ button:focus-visible,
     color: #fff;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
 /* =========================================================
    CONTACT MODAL
 ========================================================= */
@@ -829,6 +823,63 @@ ul li {
 }
 
 /* =========================================================
+   SOCIAL CONNECT
+========================================================= */
+.social-connect {
+    margin-top: 20px;
+}
+
+.social-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #f8fafc;
+    border-color: rgba(13, 202, 240, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    color: #0f172a;
+}
+
+.social-links a:focus-visible {
+    outline: 3px solid #fcd34d;
+    outline-offset: 3px;
+}
+
+.social-links svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* =========================================================
    FOOTER
 ========================================================= */
 footer {
@@ -1084,6 +1135,16 @@ footer a:hover {
     section {
         margin: 28px 10px;
         padding: 24px 16px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .social-links a {
+        width: 100%;
+        justify-content: center;
     }
 }
 
